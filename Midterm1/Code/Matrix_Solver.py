@@ -74,14 +74,14 @@ class MatrixSolver:
 
             if (i == j) and (alpha == beta):
                 temp3 = (M.one_body(alpha) - M.one_body(i))
-            else:
-                temp3 = 0
-
-            temp4 = 0
-            if (i == j) and (alpha == beta):
                 temp4 = sum(M.one_body(k) + sum(0.5 * M.two_body(k, l, k, l) for l in below_states) 
                             for k in below_states)
 
+            else:
+                temp3 = 0
+                temp4 = 0
+
+                
             return temp1 + temp2 + temp3 + temp4
 
         else:

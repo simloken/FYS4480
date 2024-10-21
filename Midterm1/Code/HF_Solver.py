@@ -162,7 +162,7 @@ class HF_Solver:
             if stop:
                 break
 
-            rho = self.make_density_matrix(C.T)  # Update density matrix with transposed coefficients
+            rho = self.make_density_matrix(C.T)  # Update density matrix with transposed(!!) coefficients
 
             self.gs(rho)  # Compute ground-state energy
             self.energyConvergence.append(self.E)  # Track energy convergence
