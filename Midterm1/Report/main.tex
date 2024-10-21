@@ -49,7 +49,9 @@
 \renewcommand{\thesubsection}{\alph{subsection})}
 
 \section*{Contents}
-This midterm contains parts a) through g), in addition to two appendices, A and B, which contain some Kronecker Delta contractions and diagrams respectively
+This midterm contains parts a) through g), in addition to two appendices, A and B, which contain some Kronecker Delta contractions and diagrams respectively. Everything requested in the midterm should be answered unless I missed something, except the second quantization of the Hartree-Fock operator, which I could not find.
+\newline
+Repository with all code is at \href{https://github.com/simloken/FYS4480}{https://github.com/simloken/FYS4480}
 \section{}
 First, some formalism:
 \newline
@@ -228,6 +230,7 @@ The Hamiltonian Matrix is now:
 \langle \Phi_{1\downarrow}^{3\downarrow} | \hat H | \Phi_{1\downarrow}^{3\downarrow} \rangle \\
 \end{bmatrix}
 \end{equation}
+Performing now the calculation with the python script, we find that such an approach yields the energy $E^{He}_{Mat} = -2.77\; a.u.$ which is a relatively good measurement.
 \section{}
 We use the same approach as we did for Helium, and the same basis, except that we're now dealing with $Z=4$. Thus we get the ansatz:
 \begin{equation}
@@ -247,6 +250,7 @@ and we end up with:
 \begin{equation}
     E[\Phi_0] = - \frac{5Z^2}{4} + \frac{586373}{373248}Z \xrightarrow[]{Z = 4} E\left[\Phi_0 \right] = -13.716 \; a.u.
 \end{equation}
+We perform now again the same calculation as in c), except that we now move the Fermi level up 1. We find then the energy $E_{Mat}^{Be} = -13.75 a.u.$, which is a small improvement from the rudimentary value we found just above.
 \section{}
 We must now rewrite our expression for the ground state estimation, we have that:
 \begin{equation*}
